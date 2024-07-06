@@ -27,9 +27,10 @@ RUN mkdir "GameSave"
 WORKDIR /home/steam/steamcmd
 RUN ./steamcmd.sh +login anonymous +app_update 294420 +quit
 
-# Copy our local serverconfig.xml into the game's path.
+# Copy our local serverconfig.xml and mods into the game's path.
 WORKDIR "/home/steam/Steam/steamapps/common/7 Days to Die Dedicated Server"
 COPY --chown=$UID_V:$GID_V ["./serverconfig.xml", "/home/steam/Steam/steamapps/common/7 Days to Die Dedicated Server/serverconfig.xml"]
+COPY --chown=$UID_V:$GID_V ["./Mods/", "/home/steam/Steam/steamapps/common/7 Days to Die Dedicated Server/Mods/"]
 
 # External Ports
 EXPOSE 26900
