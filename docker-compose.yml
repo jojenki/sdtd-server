@@ -1,0 +1,24 @@
+services:
+  server:
+    build:
+      context: .
+      args:
+        # Set it via:
+        #   export UID_V=$(id -u)
+        - UID_V=${UID_V:?Run `export UID_V=$(id -u)`}
+        # Set it via:
+        #   export GID_V=$(id -g)
+        - GID_V=${GID_V:?Run `export GID_V=$(id -g)`}
+    user: ${UID_V}:${GID_V}
+    ports:
+      - 26900:26900/udp
+      - 26901:26901/udp
+      - 26902:26902/udp
+      - 26903:26903/udp
+      - 26910:8080/tcp
+      - 26911:8081/tcp
+      - 26912:8082/tcp
+    volumes:
+      # Be sure to create these files locally before running `docker compose up`.
+      - ./Save:/home/steam/GameSave
+      - ./Mods:/home/steam/Steam/steamapps/common/7 Days to Die Dedicated Server/Mods
