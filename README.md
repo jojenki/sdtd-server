@@ -30,7 +30,7 @@ cd
 Install Git; clone this repo:
 
 ```
-git clone https://github.com/jojenki/sdtd-server
+git clone https://github.com/jojenki/sdtd-server .
 ```
 
 Create the directories:
