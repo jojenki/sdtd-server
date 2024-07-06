@@ -21,4 +21,3 @@ services:
     volumes:
       # Be sure to create these files locally before running `docker compose up`.
       - ./Save:/home/steam/GameSave
-      - ./Mods:/home/steam/Steam/steamapps/common/7 Days to Die Dedicated Server/Mods
