@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <ServerSettings>
-	<!-- GENERAL SERVER SETTINGS -->
+  <!-- GENERAL SERVER SETTINGS -->
 
-	<!-- Server representation -->
+  <!-- Server representation -->
     <!-- Whatever you want the name of the server to be. -->
     <property name="ServerName" value="CHANGE ME" />
-  	<!-- Whatever you want the server description to be, will be shown in the server browser. -->
+    <!-- Whatever you want the server description to be, will be shown in the server browser. -->
     <property name="ServerDescription" value="A 7 Days to Die server" />
     <!-- Website URL for the server, will be shown in the serverbrowser as a clickable link -->
     <property name="ServerWebsiteURL" value="" />
@@ -18,7 +18,7 @@
     <!-- Primary language for players on this server. Values: Use any language name that you would users expect to search for. Should be the English name of the language, e.g. not "Deutsch" but "German" -->
     <property name="Language" value="English" />
 
-	<!-- Networking -->
+  <!-- Networking -->
     <!-- Port you want the server to listen on. Keep it in the ranges 26900 to 26905 or 27015 to 27020 if you want PCs on the same LAN to find it as a LAN server. -->
     <property name="ServerPort" value="26900" />
     <!-- Visibility of this server: 2 = public, 1 = only shown to friends, 0 = not listed. As you are never friend of a dedicated server setting this to "1" will only work when the first player connects manually by IP. -->
@@ -28,9 +28,9 @@
     <!-- Maximum (!) speed in kiB/s the world is transferred at to a client on first connect if it does not have the world yet. Maximum is about 1300 kiB/s, even if you set a higher value. -->
     <property name="ServerMaxWorldTransferSpeedKiBs" value="1300" />
 
-	<!-- Slots -->
+  <!-- Slots -->
     <!-- Maximum Concurrent Players -->
-	  <property name="ServerMaxPlayerCount" value="8" />
+    <property name="ServerMaxPlayerCount" value="8" />
     <!-- Out of the MaxPlayerCount this many slots can only be used by players with a specific permission level -->
     <property name="ServerReservedSlots" value="0" />
     <!-- Required permission level to use reserved slots above -->
@@ -40,7 +40,7 @@
     <!-- Required permission level to use the admin slots above -->
     <property name="ServerAdminSlotsPermission" value="0" />
   
-	<!-- Admin interfaces -->
+  <!-- Admin interfaces -->
     <!-- Enable/disable the web dashboard -->
     <property name="WebDashboardEnabled" value="false" />
     <!-- Port of the web dashboard -->
@@ -50,7 +50,7 @@
     <!-- Enable/disable rendering of the map to tile images while exploring it. This is used e.g. by the web dashboard to display a view of the map. -->
     <property name="EnableMapRendering" value="false" />
   
-    <!-- Enable/Disable the telnet -->
+  <!-- Enable/Disable the telnet -->
     <property name="TelnetEnabled" value="true" />
     <!-- Port of the telnet server -->
     <property name="TelnetPort" value="8081" />
@@ -62,31 +62,29 @@
     <property name="TelnetFailedLoginsBlocktime" value="10" />
 
     <!-- Show a terminal window for log output / command input (Windows only) -->
-  	<property name="TerminalWindowEnabled"			value="true"/>
+    <property name="TerminalWindowEnabled" value="true"/>
   
-	<!-- Folder and file locations -->
+  <!-- Folder and file locations -->
     <!-- Server admin file name. Path relative to the SaveGameFolder -->
-	  <property name="AdminFileName"					value="serveradmin.xml"/>	
+    <property name="AdminFileName" value="serveradmin.xml"/>
     <!-- Use this to override where the server stores all generated data, including RWG generated worlds. Do not forget to uncomment the entry! -->
-	  <!-- <property name="UserDataFolder"				value="absolute path" /> -->
+    <!-- <property name="UserDataFolder" value="absolute path" /> -->
     <!-- Use this to only override the save game path. Do not forget to uncomment the entry! -->
-    <property name="SaveGameFolder"				value="/home/steam/GameSave" />	
+    <property name="SaveGameFolder" value="/home/steam/GameSave" />
 
-	<!-- Other technical settings -->
+  <!-- Other technical settings -->
     <!-- Enables/Disables EasyAntiCheat -->
-  	<property name="EACEnabled"						value="true"/>				
+    <property name="EACEnabled" value="true"/>
     <!-- Hide logging of command execution. 0 = show everything, 1 = hide only from Telnet/ControlPanel, 2 = also hide from remote game clients, 3 = hide everything -->
-  	<property name="HideCommandExecutionLog"		value="0"/>					
+    <property name="HideCommandExecutionLog" value="0"/>
     <!-- Override how many chunks can be uncovered on the ingame map by each player. Resulting max map file size limit per player is (x * 512 Bytes), uncovered area is (x * 256 m²). Default 131072 means max 32 km² can be uncovered at any time -->
-  	<property name="MaxUncoveredMapChunksPerPlayer"	value="131072"/>	
+    <property name="MaxUncoveredMapChunksPerPlayer" value="131072"/>
     <!-- If disabled a player can join with any selected profile. If true they will join with the last profile they joined with -->
-  	<property name="PersistentPlayerProfiles"		value="false" />			
+    <property name="PersistentPlayerProfiles" value="false" />
 
+  <!-- GAMEPLAY -->
 
-
-	<!-- GAMEPLAY -->
-	
-  	<!-- World -->
+  <!-- World -->
     <!-- "RWG" (see WorldGenSeed and WorldGenSize options below) or any already existing world name in the Worlds folder (currently shipping with e.g. "Navezgane", "PREGEN01", ...) -->
     <property name="GameWorld" value="Navezgane" />
     <!-- If RWG this is the seed for the generation of the new world. If a world with the resulting name already exists it will simply load it -->
@@ -98,7 +96,7 @@
     <!-- GameModeSurvival -->
     <property name="GameMode" value="GameModeSurvival" />
   
-  	<!-- Difficulty -->
+  <!-- Difficulty -->
     <!-- 0 - 5, 0=easiest, 5=hardest -->
     <property name="GameDifficulty" value="1" />
     <!-- How much damage do players to blocks (percentage in whole numbers) -->
@@ -114,7 +112,7 @@
     <!-- Hours in world time this safe zone exists -->
     <property name="PlayerSafeZoneHours" value="5" />
   
-  	<!-- Duration -->
+  <!-- Duration -->
     <!-- cheat mode on/off -->
     <property name="BuildCreate" value="false" />
     <!-- real time minutes per in game day: 60 minutes -->
@@ -132,7 +130,7 @@
     <!-- Number of real world days a bedroll stays active after owner was last online -->
     <property name="BedrollExpiryTime" value="45" />
   
-  	<!-- Performance related -->
+  <!-- Performance related -->
     <!-- This setting covers the entire map. There can only be this many zombies on the entire map at one time. Changing this setting has a huge impact on performance. -->
     <property name="MaxSpawnedZombies" value="64" />
     <!-- If your server has a large number of players you can increase this limit to add more wildlife. Animals don't consume as much CPU as zombies. NOTE: That this doesn't cause more animals to spawn arbitrarily: The biome spawning system only spawns a certain number of animals in a given area, but if you have lots of players that are all spread out then you may be hitting the limit and can increase it. -->
@@ -142,7 +140,7 @@
     <!-- Maximum amount of Chunk mesh layers that can be enqueued during mesh generation. Reducing this will improve memory usage but may increase Chunk generation time -->
     <property name="MaxQueuedMeshLayers" value="1000" />
   
-	<!-- Zombie settings -->
+  <!-- Zombie settings -->
     <!-- Enable/Disable enemy spawning -->
     <property name="EnemySpawnMode" value="true" />
     <!-- 0 = Normal, 1 = Feral -->
@@ -176,13 +174,13 @@
     <!-- Sets if a marker is added to map/compass for air drops. -->
     <property name="AirDropMarker" value="true" />
   
-	<!-- Multiplayer -->
+  <!-- Multiplayer -->
     <!-- The distance you must be within to receive party shared kill xp and quest party kill objective credit. -->
-  	<property name="PartySharedKillRange" value="100"/>				
+    <property name="PartySharedKillRange" value="100"/>
     <!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
-  	<property name="PlayerKillingMode" value="3" />				
+    <property name="PlayerKillingMode" value="3" />
 
-	<!-- Land claim options -->
+  <!-- Land claim options -->
     <!-- Maximum allowed land claims per player. -->
     <property name="LandClaimCount" value="3" />
     <!-- Size in blocks that is protected by a keystone -->
@@ -210,16 +208,16 @@
     <property name="DynamicMeshMaxItemCache" value="3" />
 
     <!-- Required permission level to use twitch integration on the server -->
-  	<property name="TwitchServerPermission"			value="90"/>				
+    <property name="TwitchServerPermission" value="90"/>
     <!-- If the server allows twitch actions during a blood moon. This could cause server lag with extra zombies being spawned during blood moon. -->
-  	<property name="TwitchBloodMoonAllowed"			value="false"/>				
+    <property name="TwitchBloodMoonAllowed" value="false"/>
 
     <!-- The number of in-game days which must pass since visiting a chunk before it will reset to its original state if not revisited or protected (e.g. by a land claim or bedroll being in close proximity). -->
-  	<property name="MaxChunkAge"					value="-1"/>				
+    <property name="MaxChunkAge" value="-1"/>
     <!-- The maximum disk space allowance for each saved game in megabytes (MB). Saved chunks may be forceably reset to their original states to free up space when this limit is reached. Negative values disable the limit. -->
-  	<property name="SaveDataLimit"					value="-1"/>				
+    <property name="SaveDataLimit" value="-1"/>
 
-	<!-- There are several game settings that you cannot change when starting a new game.
-	You can use console commands to change at least some of them ingame.
-	setgamepref BedrollDeadZoneSize 30 -->
+  <!-- There are several game settings that you cannot change when starting a new game.
+       You can use console commands to change at least some of them ingame.
+       setgamepref BedrollDeadZoneSize 30 -->
 </ServerSettings>
