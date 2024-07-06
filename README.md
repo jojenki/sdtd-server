@@ -93,3 +93,14 @@ docker container rm sdtd-server-1
 docker image rm sdtd-server
 docker compose up -d --build --force-recreate
 ```
+
+## Connect to the Instance
+
+If you need to go into the instance, e.g. to check logs:
+
+```
+docker exec -it sdtd-server-1 bash
+```
+
+> [!WARNING]
+> Changes are not persisted if the image is recreated.
