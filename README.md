@@ -15,13 +15,13 @@ host and the container.
 Create the user:
 
 ```
-foo
+sudo useradd sdtd
 ```
 
 Add them to the docker group, so that they can create containers:
 
 ```
-foo
+sudo usermod -a -G docker sdtd
 ```
 
 Switch to the user:
@@ -33,16 +33,17 @@ cd
 
 ## Setup the Environment
 
-Install Git:
+Install Git; clone this repo:
 
 ```
-foo
+git clone https://github.com/jojenki/sdtd-server
 ```
 
-Clone this repo:
+Create the directories:
 
 ```
-foo
+mkdir Save
+mkdir Mods
 ```
 
 Edit the `serverconfig.xml` file, specifically **be sure to set a password if
