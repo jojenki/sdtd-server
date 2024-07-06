@@ -80,7 +80,7 @@ connecting to it with any computer for the first time.
 ## Stop the Server
 
 ```
-docker compose down sdtd-server-1
+docker compose down
 ```
 
 ## Update the Server
