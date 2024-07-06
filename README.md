@@ -33,10 +33,15 @@ Install Git; clone this repo:
 git clone https://github.com/jojenki/sdtd-server .
 ```
 
-Create the directories:
+Create the save directory; this is where the server will write the save files:
 
 ```
 mkdir Save
+```
+
+Create the Mods folder and put your mods in here:
+
+```
 mkdir Mods
 ```
 
@@ -92,6 +97,14 @@ docker compose down sdtd-server-1
 docker container rm sdtd-server-1
 docker image rm sdtd-server
 docker compose up -d --build --force-recreate
+```
+
+## Update Mods
+
+Update the contents of the `Mods` folder and then re-run the `compose` command with `--build`:
+
+```
+docker compose up --build
 ```
 
 ## Connect to the Instance
