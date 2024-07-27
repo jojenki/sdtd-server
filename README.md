@@ -93,10 +93,10 @@ docker compose down
 The save files are in the `Save/` directory, so we can safely destroy the old container and create a new one:
 
 ```
-docker compose down sdtd-server-1
-docker container rm sdtd-server-1
+docker compose down
 docker image rm sdtd-server
-docker compose up -d --build --force-recreate
+docker compose build --no-cache
+docker compose up -d
 ```
 
 ## Update Mods
