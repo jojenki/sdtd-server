@@ -49,6 +49,9 @@ Edit the `serverconfig.xml` file, specifically **be sure to set a password if
 desired.**
 
 > [!IMPORTANT]
+> Be sure to uncomment the line with `UserDataFolder` and set the value to `/home/steam/GameSave`.
+
+> [!IMPORTANT]
 > At some point, you will need to do a 1-time setup of port forwarding on your router. I recommend making sure your local computer can connect to your local server first and that all of the desired administration settings are good to go before opening up the ports.
 
 ## Run the Server
